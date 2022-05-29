@@ -4,7 +4,7 @@ pragma solidity 0.8.14;
 
 contract MyContract {
 
-    event FakeEvent(string message, uint data);
+    event Log(string message, uint data);
 
     uint public total; 
 
@@ -14,13 +14,13 @@ contract MyContract {
     
     function addSix() public
     {
-        emit FakeEvent("before changes", total);
+        emit Log("before changes", total);
         addOne();
-        emit FakeEvent("added one", total);
+        emit Log("added one", total);
         addTwo();
-        emit FakeEvent("added two", total);
+        emit Log("added two", total);
         addThree();
-        emit FakeEvent("added three", total);
+        emit Log("added three", total);
     }
     function addOne() private{
         total += 1;
