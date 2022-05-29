@@ -5,5 +5,6 @@ def test_addSix():
     initialTotal = myContract.total()
     assert initialTotal == 0
 
-    myContract.addSix()
+    tx = myContract.addSix()
+    print(tx.events)
     assert myContract.total() == 6
